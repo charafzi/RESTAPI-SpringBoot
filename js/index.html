@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-primary">Employés</h2>
+      <button class="btn btn-primary"  data-toggle="modal" data-target="#empcreationModal">Créer</button>
+      <table class="table table-striped" id="tableemployee">
+        <thead class="thead-dark">
+          <tr>
+            <th>Id</th>
+            <th>Addresse</th>
+            <th>Email</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Salaire</th>
+            <th>Equipe</th>
+            <th width="20%">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-primary">Equipes</h2>
+      <table class="table table-striped" id="tableequipes">
+        <thead class="thead-dark">
+          <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th width="20%">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-primary">Projets</h2>
+      <table class="table table-striped" id="tableprojets">
+        <thead class="thead-dark">
+          <tr>
+            <th>CodeProjet</th>
+            <th>Nom</th>
+            <th>Date Début</th>
+            <th>Durée</th>
+            <th>Equipe</th>
+            <th width="20%">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div
+      class="modal fade"
+      id="empcreationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="empcreationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="empcreationModalLabel">Modifier employee</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nom :</label>
+                <input type="text" class="form-control" id="nomempX" required />
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label"
+                  >Prenom :</label
+                >
+                <input type="text" class="form-control" id="prenomempX" required/>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label"
+                  >E-mail :</label
+                >
+                <input type="text" class="form-control" id="mailempX" required/>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label"
+                  >Adresse :
+                </label>
+                <input type="text" class="form-control" id="adresseempX" required/>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label"
+                  >Salaire :</label
+                >
+                <input type="number" class="form-control" id="salaireempX" required/>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label"
+                  >Id Equipe</label
+                >
+                <input type="number" class="form-control" id="idequipeX" required/>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" onclick="createEmp()">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
